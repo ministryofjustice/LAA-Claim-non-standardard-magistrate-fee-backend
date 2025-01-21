@@ -87,7 +87,6 @@ module PriorAuthority
         def persist!
           return false unless save_file
 
-          application.gdpr_documents_deleted = false
           record.update!(attributes.except('id', 'service_type', 'file_upload').merge(reset_attributes))
         end
 
