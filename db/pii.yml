@@ -254,3 +254,4 @@ claims:
   youth_court_fee_adjustment_comment: false
   change_solicitor_date: false
   case_outcome_other_info: false
+  gdpr_documents_deleted: false
