@@ -43,6 +43,7 @@ module Nsm
       end
 
       def upload_file(params)
+        current_application.gdpr_documents_deleted = false
         file_path = file_uploader.upload(params[:documents])
         save_file(params[:documents], file_path)
       end

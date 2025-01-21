@@ -109,6 +109,7 @@ module PriorAuthority
       def reset_quote_cost_fields
         return unless service_type_rules_changed?
 
+        application.gdpr_documents_deleted = false
         application.quotes.find_each do |quote|
           quote.update!(
             items: nil,
