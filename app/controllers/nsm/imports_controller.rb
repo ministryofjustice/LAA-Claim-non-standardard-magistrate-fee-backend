@@ -7,7 +7,7 @@ module Nsm
     end
 
     def create
-      @form_object = ImportForm.new(params.require(:nsm_import_form).permit(:file_upload))
+      @form_object = ImportForm.new(params.expect(nsm_import_form: [:file_upload]))
 
       if @form_object.valid?
         initialize_application do |claim|

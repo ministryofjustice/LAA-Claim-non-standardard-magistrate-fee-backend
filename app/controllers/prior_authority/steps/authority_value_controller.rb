@@ -25,7 +25,7 @@ module PriorAuthority
       end
 
       def allowed_params
-        params.require(:prior_authority_steps_authority_value_form).permit(:authority_value)
+        params.expect(prior_authority_steps_authority_value_form: [:authority_value])
       end
 
       private
