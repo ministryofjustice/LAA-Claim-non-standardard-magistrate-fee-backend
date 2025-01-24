@@ -152,6 +152,9 @@ GEM
       bigdecimal
       rexml
     crass (1.0.6)
+    cronex (0.15.0)
+      tzinfo
+      unicode (>= 0.4.4.5)
     cssbundling-rails (1.4.1)
       railties (>= 6.0.0)
     csv (3.3.2)
@@ -183,6 +186,8 @@ GEM
       rubocop (>= 1)
       smart_properties
     erubi (1.13.1)
+    et-orbi (1.2.11)
+      tzinfo
     factory_bot (6.5.0)
       activesupport (>= 5.0.0)
     factory_bot_rails (6.4.4)
@@ -195,6 +200,9 @@ GEM
       faraday-net_http (>= 2.0, < 3.1)
       ruby2_keywords (>= 0.0.4)
     faraday-net_http (3.0.2)
+    fugit (1.11.1)
+      et-orbi (~> 1, >= 1.2.11)
+      raabro (~> 1.4)
     globalid (1.2.1)
       activesupport (>= 6.1)
     govuk-components (5.8.0)
@@ -331,6 +339,7 @@ GEM
     public_suffix (6.0.1)
     puma (6.5.0)
       nio4r (~> 2.0)
+    raabro (1.4.0)
     racc (1.8.1)
     rack (3.1.8)
     rack-protection (4.0.0)
@@ -465,6 +474,11 @@ GEM
       logger
       rack (>= 2.2.4)
       redis-client (>= 0.22.2)
+    sidekiq-cron (2.0.1)
+      cronex (>= 0.13.0)
+      fugit (~> 1.8, >= 1.11.1)
+      globalid (>= 1.0.1)
+      sidekiq (>= 6.5.0)
     sidekiq_alive (2.4.0)
       gserver (~> 0.0.1)
       sidekiq (>= 5, < 8)
@@ -501,6 +515,7 @@ GEM
     tzinfo-data (1.2025.1)
       tzinfo (>= 1.0.0)
     uk_postcode (2.1.8)
+    unicode (0.4.4.5)
     unicode-display_width (3.1.4)
       unicode-emoji (~> 4.0, >= 4.0.4)
     unicode-emoji (4.0.4)
@@ -588,6 +603,7 @@ DEPENDENCIES
   sentry-rails (~> 5.22.1)
   sentry-ruby (~> 5.22.0)
   sidekiq (~> 7.3)
+  sidekiq-cron
   sidekiq_alive (~> 2.4)
   simplecov
   simplecov-rcov

@@ -1,0 +1,5 @@
+gdpr_nsm_delete_draft_docs_job:
+  # run job daily at 0615
+  cron: "15 6 * * *"
+  class: "DeleteDraftDocuments"
+  queue: pooling
